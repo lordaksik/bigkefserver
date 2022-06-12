@@ -11,6 +11,7 @@ bot.hears('/bot', async (ctx) => {
     const data = await response.json()
     let res = 2;
     let res2 = 0;
+    let result=0,result2=0;
     for (let i = 0; i <= 1; i++) {
       score_dealer = data.items.results[i].results.score_dealer
       score_player = data.items.results[i].results.score_player
@@ -29,7 +30,25 @@ bot.hears('/bot', async (ctx) => {
 console.log(res);
 if (res2 == 1)
 {ctx.reply( '8 в ряд');}
+for (let i = 0; i <= 2; i++) {
+  score_dealer = data.items.results[i].results.score_dealer
+  score_player = data.items.results[i].results.score_player
+  // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
+  if ((score_player > 8) && (score_dealer > 8))
+      result = result + 1;
+}
+if (result === 3)
+{ctx.reply( '6 карт больше 8');}
 
+for (let i = 0; i <= 2; i++) {
+  score_dealer = data.items.results[i].results.score_dealer
+  score_player = data.items.results[i].results.score_player
+  // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
+  if ((score_player < 8) && (score_dealer < 8))
+      result2 = result2 + 1;
+}
+if (result2 === 3)
+{ctx.reply( '6 карт меньше 8');}
 
   }
    async function request() {
