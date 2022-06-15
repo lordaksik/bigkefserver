@@ -54,7 +54,8 @@ if (result2 === 3)
     for (let i = 0; i <= 4; i++) {
   score_dealer = data.items.results[i].results.score_dealer
   score_player = data.items.results[i].results.score_player
-  // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
+   console.log("игрок " + score_player + " "+ score_dealer +" дилер")
+console.log(typeoff(score_player))
   if ((score_player ===11) || (score_dealer ===11) || (score_player ===12) || (score_dealer ===12) ||
 (score_player ===13) || (score_dealer ===13) || (score_player ===14) && (score_dealer ===14))
       { fir = fir + 1;}
