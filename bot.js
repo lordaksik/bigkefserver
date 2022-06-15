@@ -12,6 +12,7 @@ bot.hears('/bot', async (ctx) => {
     let res = 2;
     let res2 = 0;
     let result=0,result2=0;
+    let fir=0;
     for (let i = 0; i <= 1; i++) {
       score_dealer = data.items.results[i].results.score_dealer
       score_player = data.items.results[i].results.score_player
@@ -49,6 +50,17 @@ for (let i = 0; i <= 2; i++) {
 }
 if (result2 === 3)
 {ctx.reply( '6 карт меньше 8');}
+
+    for (let i = 0; i <= 4; i++) {
+  score_dealer = data.items.results[i].results.score_dealer
+  score_player = data.items.results[i].results.score_player
+  // console.log("игрок " + score_player + " "+ score_dealer +" дилер")
+  if ((score_player ===11) || (score_dealer ===11) || (score_player ===12) || (score_dealer ===12) ||
+(score_player ===13) || (score_dealer ===13) || (score_player ===14) && (score_dealer ===14))
+      { fir = fir + 1;}
+}
+if (fir === 0)
+{ctx.reply( 'Фигурок не было 5 раздач');}
 
   }
    async function request() {
