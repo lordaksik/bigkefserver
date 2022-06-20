@@ -51,7 +51,7 @@ for (let i = 0; i <= 2; i++) {
 if (result2 === 3)
 {ctx.reply( '6 карт меньше 8');}
 
-    for (let i = 0; i <= 3; i++) {
+    for (let i = 0; i <= 4; i++) {
   score_dealer = data.items.results[i].results.score_dealer
   score_player = data.items.results[i].results.score_player
    console.log("игрок " + score_player + " "+ score_dealer +" дилер")
