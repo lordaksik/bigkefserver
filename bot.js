@@ -51,18 +51,18 @@ for (let i = 0; i <= 2; i++) {
 if (result2 === 3)
 {ctx.reply( '6 карт меньше 8');}
 
-    for (let i = 0; i <= 4; i++) {
+    for (let i = 0; i <= 3; i++) {
   score_dealer = data.items.results[i].results.score_dealer
   score_player = data.items.results[i].results.score_player
    console.log("игрок " + score_player + " "+ score_dealer +" дилер")
-console.log(typeof score_player)
-  if ((parseInt(score_player,10) ===11) || (parseInt(score_dealer,10) ===11) || (parseInt(score_player,10) ===12) || (parseInt(score_dealer,10) ===12) ||
-(parseInt(score_player,10) ===13) || (parseInt(score_dealer,10) ===13) || (parseInt(score_player,10) ===14) && (parseInt(score_dealer,10) ===14))
+
+  if ((parseInt(score_player,10) === 11) || (parseInt(score_dealer,10) ===11) || (parseInt(score_player,10) ===12) || (parseInt(score_dealer,10) ===12) ||
+(parseInt(score_player,10) ===13) || (parseInt(score_dealer,10) ===13) || (parseInt(score_player,10) ===14) || (parseInt(score_dealer,10) ===14))
       { fir = fir + 1;}
 }
 console.log(fir)    
 if (fir === 0)
-{ctx.reply( 'Фигурок не было 5 раздач');}
+{ctx.reply( 'Фигурок не было 4 раздач');}
 
   }
    async function request() {
